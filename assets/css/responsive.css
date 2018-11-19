@@ -1,0 +1,178 @@
+/* clear the floats so the rest of the document flows properly */
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+/*
+ * This section is to create a responsive design usign column approach 
+ * Left most Floats dont respect their width if they do not have any content which
+ * screwed up my columns.  So I add a clear border to every col-1 to ensure it
+ * has some content -- then it respects its size
+*/
+[class*="col-"] {
+    float: left;
+    padding: 0px;
+    border: 1px solid rgba(0, 0, 0, 0);
+    /* FORCE some content in col so even blank ones respect float */
+}
+
+/* Responsive layout - when the screen is less than 640px, stack title and Nav */
+@media screen and (max-width: 640px) {
+    .col-0-small {width: 0%; border: 0;}
+    .col-1-small {width: 2.33%;}
+    .col-10-small {width: 95.66%;}
+    .col-12-small {width: 100%;}
+
+    #innerFlex {
+        margin: 0 0px 0px 0px;
+        border: 0;
+
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: left;
+    }
+
+    #title {
+        padding: 0 30px 0 30px;
+        width: 100%;
+        text-align: center;
+    }
+
+    h1 {
+        font-size: 1.5em;
+        margin: 5% 0px 5% 0;
+    }
+
+    h2 {
+        font-size: 1em;
+    }
+
+    /* Nav links right justified */
+    .navigation {
+        width: 100%;
+        margin-bottom: 5%;
+        margin-top: 5%;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .line {
+        border-right: 0px solid #9e9fa4;
+        /* line 1 pixel width, length of "Some content" */
+    }
+
+    .container {
+        margin: 2% auto 2% auto;
+    }
+
+    #main-content {
+        margin: 0px;
+    }    
+
+    /* float to make the text wrap around the image.  This is best use of float */
+    #bio-image {
+        float: none;
+        display: block;
+        width: 100%;
+        height: auto;
+        padding-left: 0;
+        padding-right: 0;
+        margin-right: 0;
+        margin-left: 0;
+    }
+
+    #myBio p {
+        letter-spacing: normal;
+        line-height: 2em;
+    }
+
+    #portfolio {
+        flex-flow: column;
+        justify-content: center;
+    }   
+
+    /* Each item has an image and a banner with text */
+    .portfolio-item {
+        display: inline-block;
+        position: relative;
+        padding: 0px 0px 0px 0px;
+        margin: 0 0 40px 0;
+        width: 100%;
+    }
+
+    /* Constrain img and put on bottom */
+    .portfolio-item img {
+        width: 100%;
+        height: 100%;
+        margin: 0px 0px 0 0;
+    }
+
+    /* The banner with the text is absolute so it can go on top of image */
+    .banner {
+        width: 100%;
+        padding: 15px 0 15px 0;
+        height: auto;
+        margin: 0;
+        position: absolute;
+        left: 0px;
+        top: auto;
+        bottom: 10px;
+        text-align: center;
+    }
+
+
+}
+
+@media screen and (min-width: 641px) {
+    .col-0 {width: 0%; border:0;}
+    .col-1 {width: 8.33%;}
+    .col-2 {width: 16.66%;}
+    .col-3 {width: 25%;}
+    .col-4 {width: 33.33%;}
+    .col-5 {width: 41.66%;}
+    .col-6 {width: 50%;}
+    .col-7 {width: 58.33%;}
+    .col-8 {width: 66.66%;}
+    .col-9 {width: 75%;}
+    .col-10 {width: 83.33%;}
+    .col-11 {width: 91.66%;}
+    .col-12 {width: 100%;}
+}
+@media screen and (min-width: 641px) and (max-width: 768px) {
+
+    /* The Bio Image */
+    #bio-image {
+        width: 350px;
+        height: auto;
+        margin-right: 20px;
+        border: 1px solid #dddddd;
+    }
+
+}
+
+/* Max Width Happens in content and (max-width: 980px) -- no need to specify */
+@media screen and (min-width: 769px)  {
+
+    /* The Bio Image */
+    #bio-image {
+        width: 400px;
+        height: auto;
+        margin-right: 20px;
+        border: 1px solid #dddddd;
+    }
+
+}
+
+@media screen and (min-width: 981px) {
+
+    /* The Bio Image */
+    #bio-image {
+        width: 400px;
+        height: auto;
+        margin-right: 20px;
+        border: 1px solid #dddddd;
+    }
+
+}
