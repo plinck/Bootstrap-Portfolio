@@ -6,78 +6,120 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Portfolio - Paul Linck</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="assets/css/reset.css" />
-    <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css" />
-    <link rel="stylesheet" type="text/css" media="screen" href="assets/css/responsive.css" />
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="assets/css/responsive.css">
     <script src="assets/js/javascript.js"></script>
 </head>
 
 <body>
     <!-- HEADER SECTION with Navigation on all pages -->
-    <header class="row">
-        <!-- Create inner div to make left and right items line up properly with content -->
-        <div class="col-1 col-0-small"></div>
-        <div id="innerFlex" class="col-10 col-12-small">
-            <div id="title">
-                <h1>Paul Linck</h1>
-            </div>
-            <!-- Nav items uses <div> vs <ul> due to errors on html checker stuff -->
-            <!-- I think this should really be a <ul> but the checker says I can not -->
-            <!-- have <div> inside of <ul> due to flow-content issues -->
-            <nav>
-                <div class="navigation">
-                    <div><a href="index.html">About</a></div>
-                    <div class="line"></div>
-                    <div><a class="current" href="portfolio.html">Portfolio</a></div>
-                    <div class="line"></div>
-                    <div><a href="contact.html">Contact</a></div>
+    <header>
+        <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+            <div class="container">
+                <span class="navbar-brand mb-1 h1">Paul Linck</span>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="portfolio.html">Portfolio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html">Contact</a>
+                        </li>
+                    </ul>
                 </div>
-            </nav>
-        </div>
-        <div class="col-1 col-0-small"></div>
+            </div>
+        </nav>
     </header>
     <!-- END HEADER SECTION SAME FOR ALL PAGES -->
 
-    <!-- Container for Page Content  -->
-    <main class="container row">
-        <div class="col-1 col-1-small"></div>
-        <!-- Section 1: Portfolio Main Content  -->
-        <section id="main-content" class="col-10 col-10-small">
-            <h2>Portfolio</h2>
-            <hr>
-            <!-- All The Portfolio Items Arranged -->
-            <div id="portfolio">
-                <div class="portfolio-item">
-                    <img src="assets/images/Dog275x200.jpeg" alt="Pet Gromming">
-                    <div class="banner"><span class="vCenter">Pet Gromming</span></div>
+    <!--  Main Content Container -->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 bg-white border border-secondary m-2 my-sm-4 cardbody">
+                <div class="page-header">
+                    <h2>Portfolio</h2>
+                    <hr>
                 </div>
-                <div class="portfolio-item">
-                    <img src="assets/images/Swim275x200.jpeg" alt="Ironman Coaching">
-                    <div class="banner">Ironman Coaching</div>
-                </div>
-                <div class="portfolio-item">
-                    <img src="assets/images/Table275x200.jpeg" alt="Recipe App">
-                    <div class="banner">Recipe App</div>
-                </div>
-                <div class="portfolio-item">
-                    <img src="assets/images/JustDice-275x200.png" alt="Just Dice iOS App">
-                    <div class="banner">Just Dice iOS App</div>
-                </div>
-                <div class="portfolio-item">
-                    <img src="assets/images/TakePhoto275x200.jpeg" alt="Photos">
-                    <div class="banner">Photos</div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <!-- Portfolio Items -->
+                        <!-- Simple image with overlay using card -->
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="d-flex flex-column align-items-center flex-sm-row flex-wrap justify-content-sm-left">
+                                    <div class="card bg-dark text-white m-2">
+                                        <img class="card-img border-0" src="http://placehold.it/275x200" alt="Card image background"
+                                            width="275px" height="200px">
+                                        <div class="card-img-overlay h-100 d-flex flex-column justify-content-end m-0 p-0">
+                                            <h4 class="card-title bg-dark text-center p-2">Title</h4>
+                                        </div>
+                                    </div>
+                                    <div class="card bg-dark text-white m-2">
+                                        <img class="card-img border-0" src="http://placehold.it/275x200" alt="Card image background"
+                                            width="275px" height="200px">
+                                        <div class="card-img-overlay h-100 d-flex flex-column justify-content-end m-0 p-0">
+                                            <h4 class="card-title bg-dark text-center p-2">Title</h4>
+                                        </div>
+                                    </div>
+                                    <div class="card bg-dark text-white m-2">
+                                        <img class="card-img border-0" src="http://placehold.it/275x200" alt="Card image background"
+                                            width="275px" height="200px">
+                                        <div class="card-img-overlay h-100 d-flex flex-column justify-content-end m-0 p-0">
+                                            <h4 class="card-title bg-dark text-center p-2">Title</h4>
+                                        </div>
+                                    </div>
+                                    <div class="card bg-dark text-white m-2">
+                                        <img class="card-img border-0" src="http://placehold.it/275x200" alt="Card image background"
+                                            width="275px" height="200px">
+                                        <div class="card-img-overlay h-100 d-flex flex-column justify-content-end m-0 p-0">
+                                            <h4 class="card-title bg-dark text-center p-2">Title</h4>
+                                        </div>
+                                    </div>
+                                    <div class="card bg-dark text-white m-2">
+                                        <img class="card-img border-0" src="http://placehold.it/275x200" alt="Card image background"
+                                            width="275px" height="200px">
+                                        <div class="card-img-overlay h-100 d-flex flex-column justify-content-end m-0 p-0">
+                                            <h4 class="card-title bg-dark text-center p-2">Title</h4>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End Simple image with overlay using card -->
+
+                    </div>
                 </div>
             </div>
-            <!-- End Section 1: Main Content Portfolio -->
-        </section>
+        </div>
+    </div>
 
-        <div class="col-1-small"></div>
-        <!-- End Content .container -->
-    </main>
+    <!--  End Main Content -->
 
-    <footer>
-        Copyright &COPY;
+    <footer class="footer">
+        <nav class="navbar navbar-dark bg-dark bg-secondary text-white fixed-bottom">
+            <div class="container justify-content-center">
+                <span class="navbar-brand mb-1 h1">Copyright &COPY;</span>
+            </div>
+        </nav>
     </footer>
+
 </body>
 
 </html>
