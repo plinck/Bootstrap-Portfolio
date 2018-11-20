@@ -8,6 +8,9 @@ body {
 .main-content {
     margin-bottom: 70px
 }
+.nav-item{
+    text-align: right;
+}
 
 /* We occasionally use media queries that go in the other direction (the given screen size or smaller): */
 /* Extra small devices (portrait phones, less than 576px) */
