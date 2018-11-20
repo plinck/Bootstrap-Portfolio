@@ -9,12 +9,14 @@
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
         crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
         crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
         crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
         crossorigin="anonymous"></script>
+
 
     <link rel="stylesheet" href="assets/css/responsive.css">
     <script src="assets/js/javascript.js"></script>
@@ -23,7 +25,7 @@
 <body>
     <!-- HEADER SECTION with Navigation on all pages -->
     <header>
-        <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+        <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
             <div class="container">
                 <span class="navbar-brand mb-1 h1">Paul Linck</span>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
@@ -49,7 +51,7 @@
     <!-- END HEADER SECTION SAME FOR ALL PAGES -->
 
     <!--  Main Content -->
-    <div class="container">
+    <div class="container main-content">
         <div class="row">
             <div class="col-md-12 bg-white border border-secondary m-2 my-sm-4 cardbody">
                 <div class="page-header">
@@ -103,13 +105,24 @@
 
     <!--  End Main Content -->
 
+    <!-- FOOTER -->
     <footer class="footer">
-        <nav class="navbar navbar-dark bg-dark bg-secondary text-white fixed-bottom">
+        <nav class="navbar navbar-expand navbar-dark bg-dark bg-secondary text-white fixed-bottom">
             <div class="container justify-content-center">
                 <span class="navbar-brand mb-1 h1">Copyright &COPY;</span>
             </div>
+            <div class="justify-content-end">
+                <ul class="nav navbar-expand navbar-nav justify-content-between">
+                    <li><a href="https://www.linkedin.com/in/paul-linck/" class="nav-link text-white"><i class="fa fa-linkedin-square fa-lg"
+                                aria-hidden="true"></i></a></li>
+                    <li><a href="https://github.com/plinck" class="nav-link text-white"><i class="fa fa-github-square fa-lg"
+                                aria-hidden="true"></i></a></li>
+                    <li><a href="#" class="nav-link text-white"><i class="fa fa-twitter-square fa-lg" aria-hidden="true"></i></a></li>
+                </ul>
+            </div>
         </nav>
     </footer>
+    <!-- END FOOTER -->
 
 </body>
 
