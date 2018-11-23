@@ -15,6 +15,11 @@ body {
     text-align: right;
 }
 
+.my-bg-primary {
+    background-color: #4aaaa5;
+    color: #777777;
+}
+
 /* We occasionally use media queries that go in the other direction (the given screen size or smaller): */
 /* Extra small devices (portrait phones, less than 576px) */
 @media (max-width: 575.98px) {
