@@ -58,6 +58,24 @@ body {
         width: 100%;
         height: auto;
     }
+    .my-bg-primary-sm {
+        background-color: #4aaaa5;
+        color: #ffffff;    
+    }
+
+    .my-bg-secondary-sm {
+        background-color: #ffffff;
+        color:black;    
+        width: 100%;
+        align-content: center;
+        justify-items: center;
+        justify-content: center;
+    }
+
+    .my-navbar-sm {
+        margin: 0;
+        padding: 0;
+    }
 }
 
 /* Limit max width of container to match instructions */
