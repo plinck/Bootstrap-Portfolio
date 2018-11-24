@@ -46,40 +46,48 @@ body {
 
 /* We occasionally use media queries that go in the other direction (the given screen size or smaller): */
 /* Extra small devices (portrait phones, less than 576px) */
-@media (max-width: 575.98px) {
-    .size-xs-full {
-        width: 100%;
-    }
+@media screen and (max-width: 640px) {
     .card {
         width: 100%;
         height: auto;
     }
+
     .card-img {
         width: 100%;
         height: auto;
     }
+
     .my-bg-primary-sm {
         background-color: #4aaaa5;
-        color: #ffffff;    
+        color: #ffffff;
     }
 
     .my-bg-secondary-sm {
         background-color: #ffffff;
-        color:black;    
+        color: black;
         width: 100%;
         align-content: center;
         justify-items: center;
         justify-content: center;
     }
 
+    /* Had to use important since it was not overirding the row in framework */
+    .my-flex-sm-column {
+        flex-direction: column !important;
+    }
+
     .my-navbar-sm {
         margin: 0;
         padding: 0;
     }
+
+    .container {
+        max-width: 640px;
+    }
 }
 
 /* Limit max width of container to match instructions */
-@media (min-width: 1200px) {
+@media screen and (min-width: 1200px) {
     .container {
         max-width: 960px;
     }
