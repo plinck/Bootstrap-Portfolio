@@ -11,13 +11,37 @@ body {
 .main-content {
     margin-bottom: 70px
 }
-.nav-item{
-    text-align: right;
-}
 
 .my-bg-primary {
     background-color: #4aaaa5;
+    color: #ffffff;
+}
+
+.my-bg-reverse {
+    background-color: #ffffff;
+    color: #4aaaa5;
+}
+
+.my-text-primary {
     color: #777777;
+}
+
+.my-border-top {
+    border-top: 8px solid #4aaaa5;
+}
+
+.my-border-bottom-2 {
+    border-bottom: 2px solid;
+}
+
+.my-border-secondary {
+    border-color: #dddddd;
+}
+
+/* override bootstrap colors and fonts */
+.btn-primary {
+    background-color: #4aaaa5;
+    border-color: #4aaaa5;
 }
 
 /* We occasionally use media queries that go in the other direction (the given screen size or smaller): */
@@ -25,5 +49,20 @@ body {
 @media (max-width: 575.98px) {
     .size-xs-full {
         width: 100%;
+    }
+    .card {
+        width: 100%;
+        height: auto;
+    }
+    .card-img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+/* Limit max width of container to match instructions */
+@media (min-width: 1200px) {
+    .container {
+        max-width: 960px;
     }
 }
