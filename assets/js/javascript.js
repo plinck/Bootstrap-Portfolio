@@ -14,7 +14,7 @@ window.onload = function() {
 
 // Grab the email from the form and invoke the mail app to send the mail
 function emailUser() {
-    var emailString = document.getElementById("emailAddr").value + "?Subject=Paul Linck's Email Form Submission";
+    var emailString = document.getElementById("email").value + "?Subject=Paul Linck's Email Form Submission";
 
     document.getElementById('infoSubmit').action = 'mailto:' + emailString;
 
