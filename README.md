@@ -1,4 +1,4 @@
-# Responsiveness Assignment
+# Bootstrap Responsiveness Assignment
 
 ### Overview
 
