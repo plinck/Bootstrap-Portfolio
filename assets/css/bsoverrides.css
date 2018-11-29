@@ -9,7 +9,7 @@ body {
 
 /* Had to do this since fixed footer was covering bottom of content */
 .main-content {
-    margin-bottom: 70px
+    margin-bottom: 70px;
 }
 
 .my-bg-primary {
