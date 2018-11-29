@@ -47,7 +47,7 @@ body {
 /* We occasionally use media queries that go in the other direction (the given screen size or smaller): */
 /* Extra small devices (portrait phones, less than 576px) */
 @media screen and (max-width: 640px) {
-    .my-sm-image {
+    .my-sm-image-wrapper {
         width: 100%;
     }
     
